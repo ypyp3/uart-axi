@@ -11,7 +11,7 @@
 // **********************************************************************
 
 module uart_axi (
-    // urat
+    // uart
     input               i_uart_rx,
     output              o_uart_tx,
     // AXI master
