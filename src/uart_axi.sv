@@ -10,7 +10,7 @@
 // * 2019/09/05  ypyp3      1      New
 // **********************************************************************
 
-module urat_axi (
+module uart_axi (
     // urat
     input               i_uart_rx,
     output              o_uart_tx,
