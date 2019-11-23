@@ -11,7 +11,7 @@
 // **********************************************************************
 
 
-function [9:0] baud_cntr_limit_100m (input baud_rate);
+function [9:0] baud_cntr_limit_100m (input integer baud_rate);
 
     `ifdef DEF_RTL_SIM
 baud_cntr_limit_100m = 10'd16 - 10'd1;
@@ -30,7 +30,7 @@ endfunction : baud_cntr_limit_100m
 
 // UART TX, RX wrapper
 module uart_trx #(
-    P_BAUD_RATE = 115200
+    parameter P_BAUD_RATE = 115200
 )(
     // system
     input               clk,        // 100MHz
@@ -76,7 +76,7 @@ endmodule : uart_trx
 
 
 module uart_tx #(
-    P_BAUD_RATE = 115200
+    parameter P_BAUD_RATE = 115200
 )(
     // system
     input               clk,    // 100MHz
